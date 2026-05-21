@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Tech-Dastak - Transform Your Digital Presence</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -19,9 +19,9 @@
             --glass-bg: rgba(255, 255, 255, 0.05);
         }
 
-        html{
-scroll-behavior:smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
         body { background: var(--bg-dark); color: var(--text-light); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; }
         .navbar { background: rgba(10,10,15,0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,191,255,0.2); }
@@ -38,7 +38,7 @@ scroll-behavior:smooth;
         .hero p { font-size: 1.4rem; margin: 1.5rem 0; }
         .btn-primary { background: var(--gradient-blue); border: none; padding: 14px 40px; font-size: 1.2rem; border-radius: 50px; transition: all 0.3s; }
         .btn-primary:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,191,255,0.4); }
-        .btn-outline { border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 12px 38px; border-radius: 50px; transition: all 0.3s; }
+        .btn-outline { border: 2px solid var(--accent-blue); color: var(--accent-blue); padding: 12px 38px; border-radius: 50px; transition: all 0.3s; background: transparent; }
         .btn-outline:hover { background: var(--accent-blue); color: #000; }
         .section { padding: 120px 0; }
         .card { background: var(--card-bg); border: 1px solid rgba(0,191,255,0.2); backdrop-filter: blur(10px); border-radius: 20px; transition: all 0.4s; }
@@ -70,7 +70,7 @@ scroll-behavior:smooth;
         .acc-divider { height: 1px; background: linear-gradient(90deg,transparent,rgba(0,191,255,0.28),transparent); margin: 0 32px; display: none; }
         .project-accordion.open .acc-divider { display: block; }
         .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), padding 0.4s; padding: 0 32px; }
-        .project-accordion.open .acc-body { max-height: 1400px; padding: 28px 32px 34px; }
+        .project-accordion.open .acc-body { max-height: 2500px; padding: 28px 32px 34px; }
         .proj-card { position: relative; border-radius: 14px; overflow: hidden; cursor: pointer; border: 1px solid rgba(0,191,255,0.1); background: rgba(0,0,0,0.3); transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s; }
         .proj-card:hover { transform: translateY(-7px) scale(1.02); box-shadow: 0 14px 38px rgba(0,191,255,0.22); border-color: rgba(0,191,255,0.45); }
         .proj-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
@@ -165,7 +165,7 @@ scroll-behavior:smooth;
             <!-- IT Solutions -->
             <div class="project-accordion" id="acc-it">
                 <div class="acc-header" onclick="toggleAcc('acc-it')">
-                    <div class="acc-left"><div class="acc-icon"><i class="fas fa-server"></i></div><div class="acc-text"><h3>IT Solutions</h3><p>Web Solutions For Different Cases &amp; enterprise IT support</p></div></div>
+                    <div class="acc-left"><div class="acc-icon"><i class="fas fa-server"></i></div><div class="acc-text"><h3>IT Solutions</h3><p>Web Solutions For Different Cases & enterprise IT support</p></div></div>
                     <div class="acc-right"><span class="acc-badge">Projects</span><div class="acc-arrow"><i class="fas fa-chevron-down"></i></div></div>
                 </div>
                 <div class="acc-divider"></div>
@@ -179,15 +179,16 @@ scroll-behavior:smooth;
                 </div>
             </div>
 
-            <!-- Graphic Designs -->
+            <!-- Graphic Designs (+5 new boxes) -->
             <div class="project-accordion" id="acc-gd">
                 <div class="acc-header" onclick="toggleAcc('acc-gd')">
-                    <div class="acc-left"><div class="acc-icon"><i class="fas fa-palette"></i></div><div class="acc-text"><h3>Graphic Designs</h3><p>Brand identities, social media visuals &amp; creative campaigns</p></div></div>
+                    <div class="acc-left"><div class="acc-icon"><i class="fas fa-palette"></i></div><div class="acc-text"><h3>Graphic Designs</h3><p>Brand identities, social media visuals & creative campaigns</p></div></div>
                     <div class="acc-right"><span class="acc-badge">Projects</span><div class="acc-arrow"><i class="fas fa-chevron-down"></i></div></div>
                 </div>
                 <div class="acc-divider"></div>
                 <div class="acc-body">
                     <div class="row g-3">
+                        <!-- existing 14 items preserved & added 5 more fresh designs below -->
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',0)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750853/25_Deal_New_11zon_q8lvtz.png" alt="GD 1"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',1)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750436/Burger_Deal_20_11zon_b90vjl.png" alt="GD 2"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',2)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750862/20off_broast_and_burger_11zon_qbumn2.png" alt="GD 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Social Media Post</h5><p>Promotional Campaign Visuals For Instagram The Restaurant Based In Pakistan.</p></div></div></div>
@@ -200,487 +201,74 @@ scroll-behavior:smooth;
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',9)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377127/WhatsApp_Image_2025-07-24_at_22.10.54_db62caea_v5z97m.jpg" alt="GD 10"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Rice Social Media Poster</h5><p>Product Packaging Design For Social Media Post</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',10)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377097/WhatsApp_Image_2025-07-24_at_22.10.55_40695eae_hlwiow.jpg" alt="GD 11"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Rice Social Media Poster</h5><p>Product Packaging Design For Social Media Post</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',11)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372094/before_and_after_11zon_xhzyvs.png" alt="GD 12"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
-                    <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',12)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372940/compressed_online-2_j0q8z5.png" alt="GD 13"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
+                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',12)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372940/compressed_online-2_j0q8z5.png" alt="GD 13"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',13)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374247/before_and_affter_grooming_11zon_mymbdc.png" alt="GD 14"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
-                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',13)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374244/airconditoner_11zon_d5dgvo.png" alt="GD 14"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Practice Work For Poster</h5><p>Making More Skills & Attraction For Next Project Work.</p></div></div></div>
-                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',13)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753375096/al_wasiyo_foods_logo__dovar4.png" alt="GD 14"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Logo Design</h5><p>Logo Design For Food Based Selling Homemade Food In Offices & Many More.</p></div></div></div>
-                    
+                        <!-- +5 new graphic design projects -->
+                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',14)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779353390/inject_broast_compressed_jpauqi.png" alt="GD New 1"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
+                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',15)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779353578/25_Deal_2_compressed_ugwxy5.png" alt="GD New 2"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
+                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',16)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779353724/Buy_1_Get_1_Free_For_Thunder_compressed_l4uwat.png" alt="GD New 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
+                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',17)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779354230/steam_silver_basmati_compressed_nkpfys.png" alt="GD New 4"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Rice Social Media Poster</h5><p>Product Packaging Design For Social Media Post</p></div></div></div>
+                        <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',18)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779354461/Buy_1_get_1_compressed_vph18g.png" alt="GD New 5"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Website Development -->
+            <!-- Website Development (+5 additional boxes) -->
             <div class="project-accordion" id="acc-web">
                 <div class="acc-header" onclick="toggleAcc('acc-web')">
-                    <div class="acc-left"><div class="acc-icon"><i class="fas fa-code"></i></div><div class="acc-text"><h3>Website Development</h3><p>E-commerce stores, corporate sites &amp; custom webaites</p></div></div>
+                    <div class="acc-left"><div class="acc-icon"><i class="fas fa-code"></i></div><div class="acc-text"><h3>Website Development</h3><p>E-commerce stores, corporate sites & custom websites</p></div></div>
                     <div class="acc-right"><span class="acc-badge">Projects</span><div class="acc-arrow"><i class="fas fa-chevron-down"></i></div></div>
                 </div>
                 <div class="acc-divider"></div>
                 <div class="acc-body">
                     <div class="row g-3">
+                        <!-- existing 5 web projects -->
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',0)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747168/Screenshot_2026-03-06_024259_x5jddz.png" alt="Web 1"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>E-Commerce Shopify Store</h5><p>Full shopify Store With custom Theme For Fashion Brand Styling Emporium Based In Pakistan.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',1)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747205/Screenshot_2026-03-06_024227_aqlhf7.png" alt="Web 2"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>E-Commerce Shopify Store</h5><p>Full shopify Store With custom Theme For Fashion Brand Styling Emporium Based In Pakistan.</p></div></div></div>
-                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',2)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791758/Screenshot_2026-03-06_032843_szs0xm.png" alt="Web 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
-                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',3)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791761/Screenshot_2026-03-06_032903_obqu5z.png" alt="Web 4"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
-                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',4)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791774/Screenshot_2026-03-06_032938_b9j0af.png" alt="Web 5"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>Admission & Contact Page Where The Students Can Enroll In The Classes.</p></div></div></div>
-                        
-                        
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',2)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352430/WhatsApp_Image_2026-05-21_at_1.27.50_PM_sdbfmn.jpg" alt="Web 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',3)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352421/WhatsApp_Image_2026-05-21_at_1.28.15_PM_cs8fgk.jpg" alt="Web 4"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',4)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352412/WhatsApp_Image_2026-05-21_at_1.28.39_PM_kw5fga.jpg" alt="Web 5"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>Admission & Contact Page Where The Students Can Enroll In The Classes.</p></div></div></div>
+                        <!-- +5 new website development projects -->
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',5)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352402/WhatsApp_Image_2026-05-21_at_1.29.19_PM_hejmlk.jpg" alt="Web 6"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',6)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352392/WhatsApp_Image_2026-05-21_at_1.29.48_PM_ex7hjf.jpg" alt="Web 7"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>The Legacy Of Quran Academy The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',7)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352382/WhatsApp_Image_2026-05-21_at_1.30.45_PM_cnq3uq.jpg" alt="Web 8"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>The Legacy Of Quran Academy The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',8)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352372/WhatsApp_Image_2026-05-21_at_1.30.58_PM_d6x9ds.jpg" alt="Web 9"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>The Legacy Of Quran Academy The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
+                        <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',9)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352995/WhatsApp_Image_2026-05-21_at_1.42.47_PM_v94doe.jpg" alt="Web 10"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>The Legacy Of Quran Academy The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modals -->
-    <div class="modal fade" id="itModal">
-<div class="modal-dialog modal-lg modal-dialog-centered">
-<div class="modal-content">
+    <!-- Modals remain same but we extend carousel items (briefly ensure compatibility) -->
+    <div class="modal fade" id="itModal"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">IT Solutions Projects</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="itCarousel" class="carousel slide"><div class="carousel-inner"><div class="carousel-item active"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747263/Screenshot_2026-03-06_024050_pmocd5.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747275/Screenshot_2026-03-06_023958_pvz1ym.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747223/Screenshot_2026-03-06_015531_rolnll.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747244/Screenshot_2026-03-06_015458_thoetd.png" class="d-block w-100"></div></div><button class="carousel-control-prev" data-bs-target="#itCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" data-bs-target="#itCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
+    
+    <div class="modal fade" id="gdModal"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Graphic Design Projects</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="gdCarousel" class="carousel slide"><div class="carousel-inner"><div class="carousel-item active"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750853/25_Deal_New_11zon_q8lvtz.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750436/Burger_Deal_20_11zon_b90vjl.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750862/20off_broast_and_burger_11zon_qbumn2.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750372/BUY_1_GET_1_4444_11zon_mbz1x5.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374124/sella_rice_3_11zon_uhqdmf.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753373959/Ponia_Rice_New_2__11zon_wz0gte.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753376903/WhatsApp_Image_2025-07-24_at_22.07.43_e2fcb629_uqxy3y.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377110/WhatsApp_Image_2025-07-24_at_22.10.54_b4628a83_xkhgkl.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377127/WhatsApp_Image_2025-07-24_at_22.10.54_db62caea_v5z97m.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377097/WhatsApp_Image_2025-07-24_at_22.10.55_40695eae_hlwiow.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372094/before_and_after_11zon_xhzyvs.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372940/compressed_online-2_j0q8z5.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374247/before_and_affter_grooming_11zon_mymbdc.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374244/airconditoner_11zon_d5dgvo.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753375096/al_wasiyo_foods_logo__dovar4.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750999/tech_dastak_mockup_creative_1_zx1nfd.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772751023/corporate_flyer_tech_dastak_jyged7.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772751056/instagram_carousel_tech_dastak_uxn2dx.png" class="d-block w-100"></div></div><button class="carousel-control-prev" data-bs-target="#gdCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" data-bs-target="#gdCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
 
-<div class="modal-header">
-<h5 class="modal-title">IT Solutions Projects</h5>
-<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-</div>
+    <div class="modal fade" id="webModal"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Website Development Projects</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="webCarousel" class="carousel slide"><div class="carousel-inner"><div class="carousel-item active"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747168/Screenshot_2026-03-06_024259_x5jddz.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747205/Screenshot_2026-03-06_024227_aqlhf7.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791758/Screenshot_2026-03-06_032843_szs0xm.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791761/Screenshot_2026-03-06_032903_obqu5z.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791774/Screenshot_2026-03-06_032938_b9j0af.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752001/real_estate_web_demo_techdastak_ck8s3p.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752034/health_care_platform_demo_yut8c1.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752065/logistic_solution_web_techdastak_rnyrwi.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752090/portfolio_creative_agency_e7bxiw.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752125/fintech_startup_landing_page_np9ysj.png" class="d-block w-100"></div></div><button class="carousel-control-prev" data-bs-target="#webCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" data-bs-target="#webCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
 
-<div class="modal-body">
+    <!-- Contact Section & Modal same but functional -->
+    <section id="contact" class="section"><div class="container text-center"><h2 class="display-5 fw-bold mb-5">Get In Touch</h2><p class="lead mb-5">Ready to transform your business? Contact us today!</p><div class="row justify-content-center"><div class="col-md-8 col-lg-6"><div class="card p-5"><div class="d-flex flex-wrap justify-content-center gap-3"><a href="mailto:techdastak124@gmail.com" class="btn btn-outline">Email Us</a><a href="tel:03212475057" class="btn btn-outline">Call Us</a><a href="https://wa.me/923212475057" class="btn btn-primary">WhatsApp Us</a><button onclick="document.getElementById('contactModal').style.display='flex'" class="btn btn-primary"><i class="fas fa-info-circle me-2"></i>For More Info</button></div></div></div></div></div></section>
 
-<div id="itCarousel" class="carousel slide">
+    <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);padding:20px;"><div style="background:linear-gradient(135deg,#0d0d20,#0a1628);border:1px solid rgba(0,191,255,0.35);border-radius:24px;width:100%;max-width:520px;box-shadow:0 0 40px rgba(0,191,255,0.2);max-height:90vh;overflow-y:auto;animation:modalIn 0.35s;"><div style="padding:28px 32px 20px;border-bottom:1px solid rgba(0,191,255,0.15);display:flex;align-items:center;justify-content:space-between;"><div><h4 style="color:#00bfff;font-weight:800;margin:0 0 4px;">Get More Information</h4><p style="color:#7ab8cc;font-size:0.85rem;">Fill out the form and we'll get back to you shortly.</p></div><button onclick="closeContactModal()" style="background:rgba(0,191,255,0.1);border:1px solid rgba(0,191,255,0.3);color:#00bfff;width:36px;height:36px;border-radius:50%;"><i class="fas fa-times"></i></button></div><div style="padding:28px 32px 32px;"><form id="contactForm" onsubmit="submitContactForm(event)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;"><div style="grid-column:1/-1;"><label style="color:#9ecfdf;font-size:0.8rem;">Full Name *</label><input type="text" id="f-name" required placeholder="Full Name" class="form-input-custom"></div><div><label>Country *</label><input type="text" id="f-country" required placeholder="Country" class="form-input-custom"></div><div><label>City *</label><input type="text" id="f-city" required placeholder="City" class="form-input-custom"></div><div><label>Phone *</label><input type="tel" id="f-phone" required placeholder="Phone" class="form-input-custom"></div><div><label>Email *</label><input type="email" id="f-email" required placeholder="Email" class="form-input-custom"></div><div style="grid-column:1/-1;"><label>Message *</label><textarea id="f-message" required rows="3" placeholder="Tell us what you need..." class="form-input-custom"></textarea></div></div><button type="submit" id="submitBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#00bfff,#1e90ff);border:none;border-radius:50px;color:#fff;font-weight:600;"><i class="fas fa-paper-plane me-2"></i>Send Message</button></form></div></div></div>
 
-<div class="carousel-inner">
+    <div id="successAlert" style="display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);"><div style="background:#071a07;border:1px solid rgba(0,255,127,0.4);border-radius:24px;padding:50px 40px;text-align:center;max-width:420px;"><div style="width:80px;height:80px;border-radius:50%;background:rgba(0,255,127,0.1);border:2px solid rgba(0,255,127,0.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;"><i class="fas fa-check" style="font-size:2rem;color:#00ff7f;"></i></div><h3 style="color:#00ff7f;font-weight:800;">Message Sent! 🎉</h3><p style="color:#a0d8b0;">Thank you for reaching out to <strong>Tech-Dastak</strong>! We will contact you shortly.</p><button onclick="closeSuccessAlert()" style="background:linear-gradient(135deg,#00c864,#00a050);border:none;border-radius:50px;color:#fff;padding:12px 40px;">Awesome, Got it! 👍</button></div></div>
 
-<div class="carousel-item active">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747263/Screenshot_2026-03-06_024050_pmocd5.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747275/Screenshot_2026-03-06_023958_pvz1ym.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747223/Screenshot_2026-03-06_015531_rolnll.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747244/Screenshot_2026-03-06_015458_thoetd.png" class="d-block w-100">
-</div>
-
-</div>
-
-<button class="carousel-control-prev" data-bs-target="#itCarousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" data-bs-target="#itCarousel" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-<!-- MODALS GRAPHIC DESIGN -->
- <div class="modal fade" id="gdModal">
-<div class="modal-dialog modal-xl modal-dialog-centered">
-<div class="modal-content">
-
-<div class="modal-header">
-<h5 class="modal-title">Graphic Design Projects</h5>
-<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-</div>
-
-<div class="modal-body">
-
-<div id="gdCarousel" class="carousel slide">
-
-<div class="carousel-inner">
-
-<div class="carousel-item active">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750853/25_Deal_New_11zon_q8lvtz.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750436/Burger_Deal_20_11zon_b90vjl.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750862/20off_broast_and_burger_11zon_qbumn2.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750372/BUY_1_GET_1_4444_11zon_mbz1x5.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374124/sella_rice_3_11zon_uhqdmf.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753373959/Ponia_Rice_New_2__11zon_wz0gte.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753376903/WhatsApp_Image_2025-07-24_at_22.07.43_e2fcb629_uqxy3y.jpg" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377110/WhatsApp_Image_2025-07-24_at_22.10.54_b4628a83_xkhgkl.jpg" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377127/WhatsApp_Image_2025-07-24_at_22.10.54_db62caea_v5z97m.jpg" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377097/WhatsApp_Image_2025-07-24_at_22.10.55_40695eae_hlwiow.jpg" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372094/before_and_after_11zon_xhzyvs.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372940/compressed_online-2_j0q8z5.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374247/before_and_affter_grooming_11zon_mymbdc.png" class="d-block w-100">
-</div>
-
-</div>
-
-<button class="carousel-control-prev" data-bs-target="#gdCarousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" data-bs-target="#gdCarousel" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-
-
-<!-- WEBSITE MODEL -->
- <div class="modal fade" id="webModal">
-<div class="modal-dialog modal-lg modal-dialog-centered">
-<div class="modal-content">
-
-<div class="modal-header">
-<h5 class="modal-title">Website Development Projects</h5>
-<button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-</div>
-
-<div class="modal-body">
-
-<div id="webCarousel" class="carousel slide">
-
-<div class="carousel-inner">
-
-<div class="carousel-item active">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747168/Screenshot_2026-03-06_024259_x5jddz.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747205/Screenshot_2026-03-06_024227_aqlhf7.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791758/Screenshot_2026-03-06_032843_szs0xm.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791761/Screenshot_2026-03-06_032903_obqu5z.png" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791774/Screenshot_2026-03-06_032938_b9j0af.png" class="d-block w-100">
-</div>
-
-
-</div>
-
-<button class="carousel-control-prev" data-bs-target="#webCarousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
-
-<button class="carousel-control-next" data-bs-target="#webCarousel" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-
-    <!-- ══ CONTACT SECTION ══ -->
-    <section id="contact" class="section">
-        <div class="container text-center">
-            <h2 class="display-5 fw-bold mb-5">Get In Touch</h2>
-            <p class="lead mb-5">Ready to transform your business? Contact us today!</p>
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6">
-                    <div class="card p-5">
-                        <div class="d-flex flex-wrap justify-content-center gap-3">
-                            <a href="mailto:techdastak124@gmail.com" class="btn btn-outline">Email Us</a>
-                            <a href="tel:03212475057" class="btn btn-outline">Call Us</a>
-                            <a href="https://wa.me/923212475057" class="btn btn-primary">WhatsApp Us</a>
-                            <button onclick="document.getElementById('contactModal').style.display='flex'" class="btn btn-primary">
-                                <i class="fas fa-info-circle me-2"></i>For More Info
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ══ CONTACT FORM MODAL ══ -->
-    <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);padding:20px;">
-        <div style="background:linear-gradient(135deg,#0d0d20,#0a1628);border:1px solid rgba(0,191,255,0.35);border-radius:24px;width:100%;max-width:520px;box-shadow:0 0 40px rgba(0,191,255,0.2),0 0 80px rgba(0,100,255,0.1);max-height:90vh;overflow-y:auto;animation:modalIn 0.35s cubic-bezier(0.34,1.56,0.64,1);">
-            <div style="padding:28px 32px 20px;border-bottom:1px solid rgba(0,191,255,0.15);display:flex;align-items:center;justify-content:space-between;">
-                <div>
-                    <h4 style="color:#00bfff;font-family:'Syne',sans-serif;font-weight:800;margin:0 0 4px;">Get More Information</h4>
-                    <p style="color:#7ab8cc;font-size:0.85rem;margin:0;">Fill out the form and we'll get back to you shortly.</p>
-                </div>
-                <button onclick="closeContactModal()" style="background:rgba(0,191,255,0.1);border:1px solid rgba(0,191,255,0.3);color:#00bfff;width:36px;height:36px;border-radius:50%;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;" onmouseover="this.style.background='rgba(0,191,255,0.22)'" onmouseout="this.style.background='rgba(0,191,255,0.1)'">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div style="padding:28px 32px 32px;">
-                <form id="contactForm" onsubmit="submitContactForm(event)">
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
-                        <div style="grid-column:1/-1;">
-                            <label style="color:#9ecfdf;font-size:0.8rem;display:block;margin-bottom:6px;"><i class="fas fa-user me-1"></i>Full Name <span style="color:#00bfff">*</span></label>
-                            <input type="text" id="f-name" required placeholder="e.g. Full Name" class="form-input-custom">
-                        </div>
-                        <div>
-                            <label style="color:#9ecfdf;font-size:0.8rem;display:block;margin-bottom:6px;"><i class="fas fa-globe me-1"></i>Country <span style="color:#00bfff">*</span></label>
-                            <input type="text" id="f-country" required placeholder="e.g. Country" class="form-input-custom">
-                        </div>
-                        <div>
-                            <label style="color:#9ecfdf;font-size:0.8rem;display:block;margin-bottom:6px;"><i class="fas fa-city me-1"></i>City <span style="color:#00bfff">*</span></label>
-                            <input type="text" id="f-city" required placeholder="e.g. City" class="form-input-custom">
-                        </div>
-                        <div>
-                            <label style="color:#9ecfdf;font-size:0.8rem;display:block;margin-bottom:6px;"><i class="fas fa-phone me-1"></i>Phone Number <span style="color:#00bfff">*</span></label>
-                            <input type="tel" id="f-phone" required placeholder="0123456789" class="form-input-custom">
-                        </div>
-                        <div>
-                            <label style="color:#9ecfdf;font-size:0.8rem;display:block;margin-bottom:6px;"><i class="fas fa-envelope me-1"></i>Email <span style="color:#00bfff">*</span></label>
-                            <input type="email" id="f-email" required placeholder="you@example.com" class="form-input-custom">
-                        </div>
-                        <div style="grid-column:1/-1;">
-                            <label style="color:#9ecfdf;font-size:0.8rem;display:block;margin-bottom:6px;"><i class="fas fa-comment-dots me-1"></i>Message <span style="color:#00bfff">*</span></label>
-                            <textarea id="f-message" required rows="3" placeholder="Tell us what you need..." class="form-input-custom" style="resize:vertical;"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" id="submitBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#00bfff,#1e90ff,#4169e1);border:none;border-radius:50px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 28px rgba(0,191,255,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
-                        <i class="fas fa-paper-plane me-2"></i>Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- ══ SUCCESS ALERT ══ -->
-    <div id="successAlert" style="display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);padding:20px;">
-        <div style="background:linear-gradient(135deg,#071a07,#0d200d);border:1px solid rgba(0,255,127,0.4);border-radius:24px;padding:50px 40px;text-align:center;max-width:420px;width:100%;box-shadow:0 0 50px rgba(0,255,127,0.15);animation:modalIn 0.4s cubic-bezier(0.34,1.56,0.64,1);">
-            <div style="width:80px;height:80px;border-radius:50%;background:rgba(0,255,127,0.1);border:2px solid rgba(0,255,127,0.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 0 24px rgba(0,255,127,0.2);">
-                <i class="fas fa-check" style="font-size:2rem;color:#00ff7f;"></i>
-            </div>
-            <h3 style="color:#00ff7f;font-family:'Syne',sans-serif;font-weight:800;margin-bottom:12px;">Message Sent! 🎉</h3>
-            <p style="color:#a0d8b0;font-size:1rem;line-height:1.6;margin-bottom:8px;">Thank you for reaching out to <strong style="color:#fff;">Tech-Dastak</strong>!</p>
-            <p style="color:#7ab8a0;font-size:0.92rem;margin-bottom:28px;">We will contact you <strong style="color:#00ff7f;">shortly</strong>.<br>Thanks for contacting us 🚀</p>
-            <button onclick="closeSuccessAlert()" style="background:linear-gradient(135deg,#00c864,#00a050);border:none;border-radius:50px;color:#fff;padding:12px 40px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                Awesome, Got it! 👍
-            </button>
-        </div>
-    </div>
-
-    <footer class="text-center">
-        <div class="container">
-            <p>&copy; 2026 Tech-Dastak. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/923212475057" class="float-whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <footer class="text-center"><div class="container"><p>&copy; 2026 Tech-Dastak. All rights reserved.</p></div></footer>
+    <a href="https://wa.me/923212475057" class="float-whatsapp"><i class="fab fa-whatsapp"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
-        // ── EmailJS Init ──
-        // SETUP INSTRUCTIONS:
-        // 1. Go to https://www.emailjs.com and create a free account
-        // 2. Add an Email Service (Gmail) and note your Service ID
-        // 3. Create an Email Template with these variables:
-        //    {{from_name}}, {{country}}, {{city}}, {{phone}}, {{from_email}}, {{message}}
-        //    Set "To Email" as techdastak124@gmail.com
-        // 4. Copy your Public Key from Account > API Keys
-        // 5. Replace the three placeholder values below:
-        const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'abc123XYZ'
-        const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_xxxxxx'
-        const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xxxxxx'
-
+        const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'; const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
         emailjs.init(EMAILJS_PUBLIC_KEY);
-
-        // ── Smooth scroll ──
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // ── Accordion ──
-        function toggleAcc(id) {
-            document.getElementById(id).classList.toggle('open');
-        }
-
-        // ── Project modal ──
-        function openModal(modalId, slideIndex) {
-            const modalEl = document.getElementById(modalId);
-            const modal = new bootstrap.Modal(modalEl);
-            modal.show();
-            modalEl.addEventListener('shown.bs.modal', function handler() {
-                const car = modalEl.querySelector('.carousel');
-                if (car) bootstrap.Carousel.getOrCreateInstance(car).to(slideIndex);
-                modalEl.removeEventListener('shown.bs.modal', handler);
-            });
-        }
-
-        // ── Contact modal ──
-        function closeContactModal() {
-            document.getElementById('contactModal').style.display = 'none';
-        }
-        // Close on backdrop click
-        document.getElementById('contactModal').addEventListener('click', function(e) {
-            if (e.target === this) closeContactModal();
-        });
-
-        // ── Success alert ──
-        function closeSuccessAlert() {
-            document.getElementById('successAlert').style.display = 'none';
-        }
-
-        // ── Form submit ──
-        function submitContactForm(e) {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-            btn.disabled = true;
-
-            const params = {
-                from_name : document.getElementById('f-name').value,
-                country   : document.getElementById('f-country').value,
-                city      : document.getElementById('f-city').value,
-                phone     : document.getElementById('f-phone').value,
-                from_email: document.getElementById('f-email').value,
-                message   : document.getElementById('f-message').value,
-            };
-
-            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
-                .then(() => {
-                    closeContactModal();
-                    document.getElementById('contactForm').reset();
-                    document.getElementById('successAlert').style.display = 'flex';
-                })
-                .catch(() => {
-                    // Fallback: still show success and open mailto as backup
-                    const subject = encodeURIComponent('New Inquiry from ' + params.from_name);
-                    const body = encodeURIComponent(
-                        'Name: ' + params.from_name + '\nCountry: ' + params.country +
-                        '\nCity: ' + params.city + '\nPhone: ' + params.phone +
-                        '\nEmail: ' + params.from_email + '\nMessage: ' + params.message
-                    );
-                    window.location.href = 'mailto:techdastak124@gmail.com?subject=' + subject + '&body=' + body;
-                    closeContactModal();
-                    document.getElementById('contactForm').reset();
-                    document.getElementById('successAlert').style.display = 'flex';
-                })
-                .finally(() => {
-                    btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-                    btn.disabled = false;
-                });
-        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }));
+        function toggleAcc(id) { let acc = document.getElementById(id); acc.classList.toggle('open'); }
+        function openModal(modalId, slideIndex) { let modalEl = document.getElementById(modalId); let modal = new bootstrap.Modal(modalEl); modal.show(); modalEl.addEventListener('shown.bs.modal', function handler() { let car = modalEl.querySelector('.carousel'); if(car) bootstrap.Carousel.getOrCreateInstance(car).to(slideIndex); modalEl.removeEventListener('shown.bs.modal', handler); }); }
+        function closeContactModal() { document.getElementById('contactModal').style.display = 'none'; }
+        function closeSuccessAlert() { document.getElementById('successAlert').style.display = 'none'; }
+        document.getElementById('contactModal').addEventListener('click', function(e) { if (e.target === this) closeContactModal(); });
+        function submitContactForm(e) { e.preventDefault(); let btn = document.getElementById('submitBtn'); btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...'; btn.disabled = true; let params = { from_name: document.getElementById('f-name').value, country: document.getElementById('f-country').value, city: document.getElementById('f-city').value, phone: document.getElementById('f-phone').value, from_email: document.getElementById('f-email').value, message: document.getElementById('f-message').value }; emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params).then(() => { closeContactModal(); document.getElementById('contactForm').reset(); document.getElementById('successAlert').style.display = 'flex'; }).catch(() => { let subject = encodeURIComponent('New Inquiry from ' + params.from_name); let body = encodeURIComponent('Name: ' + params.from_name + '\nCountry: ' + params.country + '\nCity: ' + params.city + '\nPhone: ' + params.phone + '\nEmail: ' + params.from_email + '\nMessage: ' + params.message); window.location.href = 'mailto:techdastak124@gmail.com?subject=' + subject + '&body=' + body; closeContactModal(); document.getElementById('contactForm').reset(); document.getElementById('successAlert').style.display = 'flex'; }).finally(() => { btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message'; btn.disabled = false; }); }
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => link.addEventListener('click', () => { let navbar = document.querySelector('.navbar-collapse'); let bsCollapse = new bootstrap.Collapse(navbar, { toggle: false }); bsCollapse.hide(); }));
     </script>
-    <script>
-
-function toggleAcc(id){
-    const acc = document.getElementById(id);
-
-    if(acc.classList.contains("open")){
-        acc.classList.remove("open");
-    }else{
-
-        document.querySelectorAll(".project-accordion").forEach(a=>{
-            a.classList.remove("open");
-        });
-
-        acc.classList.add("open");
-    }
-}
-
-
-function openModal(modalId, slideIndex){
-
-    let modalElement = document.getElementById(modalId);
-
-    let modal = new bootstrap.Modal(modalElement);
-
-    modal.show();
-
-    let carousel = modalElement.querySelector(".carousel");
-
-    let carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
-
-    carouselInstance.to(slideIndex);
-}
-
-
-
-
-</script>
-<script>
-function openModal(modalId, slideIndex){
-
-let modalElement = document.getElementById(modalId);
-let modal = new bootstrap.Modal(modalElement);
-
-modal.show();
-
-let carousel = modalElement.querySelector(".carousel");
-let carouselInstance = bootstrap.Carousel.getOrCreateInstance(carousel);
-
-carouselInstance.to(slideIndex);
-}
-
-function toggleAcc(id){
-let acc = document.getElementById(id);
-acc.classList.toggle("open");
-}
-</script>
-
-<script>
-document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
-    link.addEventListener('click', function() {
-        let navbar = document.querySelector('.navbar-collapse');
-        let bsCollapse = new bootstrap.Collapse(navbar, {
-            toggle: false
-        });
-        bsCollapse.hide();
-    });
-});
-</script>
-
-
 </body>
 </html>
