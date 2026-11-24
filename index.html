@@ -19,9 +19,7 @@
             --glass-bg: rgba(255, 255, 255, 0.05);
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body { background: var(--bg-dark); color: var(--text-light); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; }
         .navbar { background: rgba(10,10,15,0.7); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,191,255,0.2); }
@@ -86,6 +84,28 @@
         .modal-header { border-color: rgba(0,191,255,0.15); }
         @media(max-width:768px){ .acc-header{padding:18px} .acc-body{padding:0 18px} .project-accordion.open .acc-body{padding:20px 18px 24px} .acc-divider{margin:0 18px} .acc-badge{display:none} }
 
+        /* LEADERSHIP / TEAM */
+        #leaders { background: linear-gradient(180deg,#07070d 0%,#0a0a14 100%); position: relative; }
+        .leader-card { background: rgba(10,14,28,0.75); border: 1px solid rgba(0,191,255,0.22); border-radius: 24px; overflow: hidden; backdrop-filter: blur(14px); transition: transform 0.4s cubic-bezier(0.2,0.7,0.3,1), box-shadow 0.4s, border-color 0.4s; height: 100%; }
+        .leader-card:hover { transform: translateY(-12px); border-color: rgba(0,191,255,0.58); box-shadow: 0 0 0 1px rgba(0,191,255,0.12), 0 22px 50px rgba(0,191,255,0.22), 0 0 70px rgba(0,100,255,0.1); }
+        .leader-photo { position: relative; aspect-ratio: 1/1; background: radial-gradient(circle at 50% 35%, rgba(0,191,255,0.18), rgba(0,0,0,0.4) 70%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .leader-photo::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(0,191,255,0.05) 0 12px, transparent 12px 24px); opacity: 0.4; }
+        .leader-photo .photo-placeholder { position: relative; text-align: center; color: rgba(160,210,230,0.65); z-index: 2; }
+        .leader-photo .photo-placeholder i { font-size: 4.2rem; display: block; margin-bottom: 0.4rem; color: rgba(0,191,255,0.55); }
+        .leader-photo .photo-placeholder span { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+        .leader-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 3; }
+        .leader-badge { position: absolute; top: 14px; left: 14px; z-index: 4; font-size: 0.72rem; padding: 4px 14px; border-radius: 20px; background: rgba(0,191,255,0.14); border: 1px solid rgba(0,191,255,0.45); color: #bdeeff; backdrop-filter: blur(6px); }
+        .leader-body { padding: 26px 24px 28px; text-align: center; }
+        .leader-body h4 { font-family: 'Syne',sans-serif; font-size: 1.3rem; font-weight: 700; color: #e8f8ff; margin: 0 0 4px; }
+        .leader-role { font-size: 0.85rem; color: var(--accent-blue); font-weight: 600; margin: 0 0 14px; letter-spacing: 0.02em; }
+        .leader-skills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+        .leader-skill { font-size: 0.74rem; padding: 5px 12px; border-radius: 30px; background: rgba(0,191,255,0.08); border: 1px solid rgba(0,191,255,0.22); color: #9ecfdf; }
+        .leader-bio { font-size: 0.88rem; color: #b9d4e0; line-height: 1.6; margin: 0; }
+        .leader-social { margin-top: 16px; display: flex; gap: 12px; justify-content: center; }
+        .leader-social a { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(0,191,255,0.3); color: var(--accent-blue); background: rgba(0,191,255,0.05); transition: all 0.3s; font-size: 0.9rem; }
+        .leader-social a:hover { background: var(--accent-blue); color: #000; transform: translateY(-3px); }
+        @media(max-width:576px){ .leader-photo .photo-placeholder i{font-size:3.4rem} .leader-body{padding:20px 18px 22px} }
+
         /* FORM MODAL */
         @keyframes modalIn { from{opacity:0;transform:scale(0.85) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
         .form-input-custom { width:100%; background:rgba(0,191,255,0.05); border:1px solid rgba(0,191,255,0.25); border-radius:12px; padding:11px 16px; color:#e0f7fa; font-size:0.9rem; outline:none; transition:border-color 0.25s; display:block; }
@@ -109,6 +129,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#leaders">Leaders</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -120,11 +141,9 @@
         <div class="hero-content">
             <h1>Transform Your Business With Tech-Dastak</h1>
             <b><p class="lead">At Tech-Dastak Digital Media, we help brands build a strong online presence through SEO, Web Development, Graphic Design, Social Media Marketing, and Advanced IT Web Solutions.</p></b>
-           <p>Ww Have Pationate Lead Including <u>Uzair Khan</u>  (Owner & CEO), Cybersecurity Certified | IT Support Conultant </p>
-           <p><u>Osaid Khan</u> (President) , Wordpress Developer | Python Programming </p>
-            <p><u>Mian Muhammad Usman</u> (Director | Business Development Head) , SEO Specialist | Digital Marketing </p>
+           
             <div class="mt-5">
-                <a href="#contact" class="btn btn-primary me-3">Get Started</a>
+                <a href="#leaders" class="btn btn-primary me-3">Leaders</a>
                 <a href="#projects" class="btn btn-outline">Explore Projects</a>
             </div>
         </div>
@@ -182,7 +201,7 @@
                 </div>
             </div>
 
-            <!-- Graphic Designs (+5 new boxes) -->
+            <!-- Graphic Designs -->
             <div class="project-accordion" id="acc-gd">
                 <div class="acc-header" onclick="toggleAcc('acc-gd')">
                     <div class="acc-left"><div class="acc-icon"><i class="fas fa-palette"></i></div><div class="acc-text"><h3>Graphic Designs</h3><p>Brand identities, social media visuals & creative campaigns</p></div></div>
@@ -191,7 +210,6 @@
                 <div class="acc-divider"></div>
                 <div class="acc-body">
                     <div class="row g-3">
-                        <!-- existing 14 items preserved & added 5 more fresh designs below -->
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',0)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750853/25_Deal_New_11zon_q8lvtz.png" alt="GD 1"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',1)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750436/Burger_Deal_20_11zon_b90vjl.png" alt="GD 2"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',2)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750862/20off_broast_and_burger_11zon_qbumn2.png" alt="GD 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Social Media Post</h5><p>Promotional Campaign Visuals For Instagram The Restaurant Based In Pakistan.</p></div></div></div>
@@ -206,7 +224,6 @@
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',11)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372094/before_and_after_11zon_xhzyvs.png" alt="GD 12"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',12)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372940/compressed_online-2_j0q8z5.png" alt="GD 13"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',13)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374247/before_and_affter_grooming_11zon_mymbdc.png" alt="GD 14"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Pet Grooming Poster</h5><p>Poster Of Pet Grooming Saloon Based In Dubai.</p></div></div></div>
-                        <!-- +5 new graphic design projects -->
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',14)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779353390/inject_broast_compressed_jpauqi.png" alt="GD New 1"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',15)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779353578/25_Deal_2_compressed_ugwxy5.png" alt="GD New 2"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
                         <div class="col-6 col-md-4 col-lg-3"><div class="proj-card square" onclick="openModal('gdModal',16)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779353724/Buy_1_Get_1_Free_For_Thunder_compressed_l4uwat.png" alt="GD New 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Poster Design</h5><p>Restaurant Franchise Based In Pakistan For Chicken Broast & Burgers</p></div></div></div>
@@ -216,7 +233,7 @@
                 </div>
             </div>
 
-            <!-- Website Development (+5 additional boxes) -->
+            <!-- Website Development -->
             <div class="project-accordion" id="acc-web">
                 <div class="acc-header" onclick="toggleAcc('acc-web')">
                     <div class="acc-left"><div class="acc-icon"><i class="fas fa-code"></i></div><div class="acc-text"><h3>Website Development</h3><p>E-commerce stores, corporate sites & custom websites</p></div></div>
@@ -225,13 +242,11 @@
                 <div class="acc-divider"></div>
                 <div class="acc-body">
                     <div class="row g-3">
-                        <!-- existing 5 web projects -->
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',0)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747168/Screenshot_2026-03-06_024259_x5jddz.png" alt="Web 1"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>E-Commerce Shopify Store</h5><p>Full shopify Store With custom Theme For Fashion Brand Styling Emporium Based In Pakistan.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',1)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747205/Screenshot_2026-03-06_024227_aqlhf7.png" alt="Web 2"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>E-Commerce Shopify Store</h5><p>Full shopify Store With custom Theme For Fashion Brand Styling Emporium Based In Pakistan.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',2)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352430/WhatsApp_Image_2026-05-21_at_1.27.50_PM_sdbfmn.jpg" alt="Web 3"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',3)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352421/WhatsApp_Image_2026-05-21_at_1.28.15_PM_cs8fgk.jpg" alt="Web 4"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',4)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352412/WhatsApp_Image_2026-05-21_at_1.28.39_PM_kw5fga.jpg" alt="Web 5"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>Admission & Contact Page Where The Students Can Enroll In The Classes.</p></div></div></div>
-                        <!-- +5 new website development projects -->
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',5)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352402/WhatsApp_Image_2026-05-21_at_1.29.19_PM_hejmlk.jpg" alt="Web 6"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website For Admission</h5><p>Al Quran Institute The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',6)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352392/WhatsApp_Image_2026-05-21_at_1.29.48_PM_ex7hjf.jpg" alt="Web 7"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>The Legacy Of Quran Academy The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
                         <div class="col-md-6 col-lg-3"><div class="proj-card landscape" onclick="openModal('webModal',7)"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1779352382/WhatsApp_Image_2026-05-21_at_1.30.45_PM_cnq3uq.jpg" alt="Web 8"><div class="proj-overlay"><div class="zoom-btn"><i class="fas fa-expand-alt"></i></div><h5>Educational Website</h5><p>The Legacy Of Quran Academy The Educational Website For The Islamic Education Based On On-line Classes.</p></div></div></div>
@@ -243,14 +258,123 @@
         </div>
     </section>
 
-    <!-- Modals remain same but we extend carousel items (briefly ensure compatibility) -->
+    <!-- ===================== LEADERS / TEAM SECTION ===================== -->
+    <!--
+      HOW TO UPGRADE THIS SECTION LATER:
+      1) To add a real photo: drop a <img src="PATH" alt="Name"> INSIDE the .leader-photo div.
+         It will automatically cover the placeholder area (square 1:1).
+      2) To add a 4th leader: copy one .col-md-4 block and edit name / role / skills / bio.
+      3) To edit skills/bio: change the .leader-skill spans or the .leader-bio paragraph.
+      4) Photos look best as square portraits, min 600x600px.
+    -->
+    <section id="leaders" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Meet Our Leaders</h2>
+                <p class="lead" style="color:#7ab8cc;max-width:620px;margin:auto;">The passionate minds driving Tech-Dastak — combining cybersecurity, development, and marketing expertise to deliver real results.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Leader 1: Uzair Khan -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="leader-card">
+                        <div class="leader-photo">
+                            <span class="leader-badge">Owner &amp; CEO</span>
+                            Replace this block with: <img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1795512658/WhatsApp_Image_2026-09-04_at_11.43.22_AM_phbexq.jpg" alt="Uzair Khan"> 
+                            <div class="photo-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="leader-body">
+                            <h4>Uzair Khan</h4>
+                            <p class="leader-role">Owner &amp; Chief Executive Officer</p>
+                            <div class="leader-skills">
+                                <span class="leader-skill">Cybersecurity</span>
+                                <span class="leader-skill">IT Support</span>
+                                <span class="leader-skill">Consulting</span>
+                            </div>
+                            <p class="leader-bio">Certified cybersecurity specialist, SOC specialization from The Open University (United Kingdom) and IT support consultant leading Tech-Dastak's vision. Uzair oversees strategy, security standards, and the technical direction of every client engagement.</p>
+                            <div class="leader-social">
+                                <a href="#contact" title="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://wa.me/923212475057" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leader 2: Osaid Khan -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="leader-card">
+                        <div class="leader-photo">
+                            <span class="leader-badge">President</span>
+                            Replace this block with: <img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1795512607/WhatsApp_Image_2026-11-24_at_2.29.06_PM_phptyb.jpg" alt="Osaid Khan">
+                            <div class="photo-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="leader-body">
+                            <h4>Osaid Khan</h4>
+                            <p class="leader-role">President</p>
+                            <div class="leader-skills">
+                                <span class="leader-skill">WordPress</span>
+                                <span class="leader-skill">Data Science / Analytics</span>
+                                <span class="leader-skill">Python</span>
+                                <span class="leader-skill">Programming</span>
+                            </div>
+                            <p class="leader-bio">WordPress developer and Python programmer heading the development wing. Osaid turns requirements into reliable, scalable websites and custom tools that keep clients ahead of the curve.</p>
+                            <div class="leader-social">
+                                <a href="#contact" title="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://wa.me/923455032268" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leader 3: Mian Muhammad Usman -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="leader-card">
+                        <div class="leader-photo">
+                            <span class="leader-badge">Director</span>
+                             Replace this block with: <img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1795512618/WhatsApp_Image_2026-11-24_at_2.20.06_PM_vl6b25.jpg" alt="Mian Muhammad Usman"> 
+                            <div class="photo-placeholder">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Photo Coming Soon</span>
+                            </div>
+                        </div>
+                        <div class="leader-body">
+                            <h4>Mian Muhammad Usman</h4>
+                            <p class="leader-role">Director &amp; Business Development Head</p>
+                            <div class="leader-skills">
+                                <span class="leader-skill">SEO</span>
+                                <span class="leader-skill">Digital Marketing</span>
+                                <span class="leader-skill">Business Dev</span>
+                            </div>
+                            <p class="leader-bio">SEO specialist and digital marketing strategist leading business development. Usman grows client visibility and revenue through data-driven campaigns, organic growth, and strong partnerships.</p>
+                            <div class="leader-social">
+                                <a href="#contact" title="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://wa.me/923212475057" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
     <div class="modal fade" id="itModal"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">IT Solutions Projects</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="itCarousel" class="carousel slide"><div class="carousel-inner"><div class="carousel-item active"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747263/Screenshot_2026-03-06_024050_pmocd5.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747275/Screenshot_2026-03-06_023958_pvz1ym.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747223/Screenshot_2026-03-06_015531_rolnll.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747244/Screenshot_2026-03-06_015458_thoetd.png" class="d-block w-100"></div></div><button class="carousel-control-prev" data-bs-target="#itCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" data-bs-target="#itCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
     
     <div class="modal fade" id="gdModal"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Graphic Design Projects</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="gdCarousel" class="carousel slide"><div class="carousel-inner"><div class="carousel-item active"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750853/25_Deal_New_11zon_q8lvtz.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750436/Burger_Deal_20_11zon_b90vjl.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750862/20off_broast_and_burger_11zon_qbumn2.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750372/BUY_1_GET_1_4444_11zon_mbz1x5.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374124/sella_rice_3_11zon_uhqdmf.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753373959/Ponia_Rice_New_2__11zon_wz0gte.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753376903/WhatsApp_Image_2025-07-24_at_22.07.43_e2fcb629_uqxy3y.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377110/WhatsApp_Image_2025-07-24_at_22.10.54_b4628a83_xkhgkl.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377127/WhatsApp_Image_2025-07-24_at_22.10.54_db62caea_v5z97m.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753377097/WhatsApp_Image_2025-07-24_at_22.10.55_40695eae_hlwiow.jpg" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372094/before_and_after_11zon_xhzyvs.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753372940/compressed_online-2_j0q8z5.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374247/before_and_affter_grooming_11zon_mymbdc.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753374244/airconditoner_11zon_d5dgvo.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1753375096/al_wasiyo_foods_logo__dovar4.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772750999/tech_dastak_mockup_creative_1_zx1nfd.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772751023/corporate_flyer_tech_dastak_jyged7.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772751056/instagram_carousel_tech_dastak_uxn2dx.png" class="d-block w-100"></div></div><button class="carousel-control-prev" data-bs-target="#gdCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" data-bs-target="#gdCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
 
     <div class="modal fade" id="webModal"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Website Development Projects</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="webCarousel" class="carousel slide"><div class="carousel-inner"><div class="carousel-item active"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747168/Screenshot_2026-03-06_024259_x5jddz.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772747205/Screenshot_2026-03-06_024227_aqlhf7.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791758/Screenshot_2026-03-06_032843_szs0xm.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791761/Screenshot_2026-03-06_032903_obqu5z.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772791774/Screenshot_2026-03-06_032938_b9j0af.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752001/real_estate_web_demo_techdastak_ck8s3p.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752034/health_care_platform_demo_yut8c1.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752065/logistic_solution_web_techdastak_rnyrwi.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752090/portfolio_creative_agency_e7bxiw.png" class="d-block w-100"></div><div class="carousel-item"><img src="https://res.cloudinary.com/dyjufmakp/image/upload/v1772752125/fintech_startup_landing_page_np9ysj.png" class="d-block w-100"></div></div><button class="carousel-control-prev" data-bs-target="#webCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" data-bs-target="#webCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div></div></div></div></div>
 
-    <!-- Contact Section & Modal same but functional -->
+    <!-- Contact Section & Modal -->
     <section id="contact" class="section"><div class="container text-center"><h2 class="display-5 fw-bold mb-5">Get In Touch</h2><p class="lead mb-5">Ready to transform your business? Contact us today!</p><div class="row justify-content-center"><div class="col-md-8 col-lg-6"><div class="card p-5"><div class="d-flex flex-wrap justify-content-center gap-3"><a href="mailto:techdastak124@gmail.com" class="btn btn-outline">Email Us</a><a href="tel:03212475057" class="btn btn-outline">Call Us</a><a href="https://wa.me/923212475057" class="btn btn-primary">WhatsApp Us</a><button onclick="document.getElementById('contactModal').style.display='flex'" class="btn btn-primary"><i class="fas fa-info-circle me-2"></i>For More Info</button></div></div></div></div></div></section>
 
     <div id="contactModal" style="display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);padding:20px;"><div style="background:linear-gradient(135deg,#0d0d20,#0a1628);border:1px solid rgba(0,191,255,0.35);border-radius:24px;width:100%;max-width:520px;box-shadow:0 0 40px rgba(0,191,255,0.2);max-height:90vh;overflow-y:auto;animation:modalIn 0.35s;"><div style="padding:28px 32px 20px;border-bottom:1px solid rgba(0,191,255,0.15);display:flex;align-items:center;justify-content:space-between;"><div><h4 style="color:#00bfff;font-weight:800;margin:0 0 4px;">Get More Information</h4><p style="color:#7ab8cc;font-size:0.85rem;">Fill out the form and we'll get back to you shortly.</p></div><button onclick="closeContactModal()" style="background:rgba(0,191,255,0.1);border:1px solid rgba(0,191,255,0.3);color:#00bfff;width:36px;height:36px;border-radius:50%;"><i class="fas fa-times"></i></button></div><div style="padding:28px 32px 32px;"><form id="contactForm" onsubmit="submitContactForm(event)"><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;"><div style="grid-column:1/-1;"><label style="color:#9ecfdf;font-size:0.8rem;">Full Name *</label><input type="text" id="f-name" required placeholder="Full Name" class="form-input-custom"></div><div><label>Country *</label><input type="text" id="f-country" required placeholder="Country" class="form-input-custom"></div><div><label>City *</label><input type="text" id="f-city" required placeholder="City" class="form-input-custom"></div><div><label>Phone *</label><input type="tel" id="f-phone" required placeholder="Phone" class="form-input-custom"></div><div><label>Email *</label><input type="email" id="f-email" required placeholder="Email" class="form-input-custom"></div><div style="grid-column:1/-1;"><label>Message *</label><textarea id="f-message" required rows="3" placeholder="Tell us what you need..." class="form-input-custom"></textarea></div></div><button type="submit" id="submitBtn" style="width:100%;padding:14px;background:linear-gradient(135deg,#00bfff,#1e90ff);border:none;border-radius:50px;color:#fff;font-weight:600;"><i class="fas fa-paper-plane me-2"></i>Send Message</button></form></div></div></div>
